@@ -1,22 +1,18 @@
-.experiences-section {
+#experiences {
   padding-bottom: 1rem;
 }
 
-.experiences-section .timeline {
+#experiences .timeline {
   margin-top: 1.5rem !important;
 }
 
-.experiences-section ul {
+#experiences ul {
   padding-left: 1rem;
 }
 
-.experiences-section ul > li {
+#experiences ul > li {
   margin-left: 0;
   color: #3c4858;
-}
-
-.experiences-section .designation{
- font-weight: 600;
 }
 
 .circle {
