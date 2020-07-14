@@ -1,6 +1,7 @@
 "use strict";
 
 var projectCards;
+var courseCards;
 
 (function ($) {
   jQuery(document).ready(function () {
@@ -141,6 +142,24 @@ var projectCards;
     }
     showGithubStars();
 
+    // ================== Course cards =====================
+    // Add click action on course category selector buttons
+    var filterButtons = document.getElementById("course-filter-buttons");
+    if (filterButtons != null) {
+      var btns = filterButtons.children;
+
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          showGithubStars(btns[i].id);
+        }
+      }
+    }
+
+    var courseCardHolder = document.getElementById("course-card-holder");
+    if (courseCardHolder != null && courseCardHolder.children.length != 0) {
+      courseCards = $(".filtr-courses").filterizr({ layout: 'sameWidth' });
+    }
+  
     // ==================== Adjust height of the recent-posts card =============
 
     function adjustRecentPostsHeight() {
