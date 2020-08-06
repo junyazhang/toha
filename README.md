@@ -18,7 +18,7 @@ Example Site: [Toha Example Site](https://toha.netlify.app)
 - Google Analytics Support
 - Disqus Comment Support
 
-For more details about the features please visit [here](https://toha.netlify.app/posts/features/features/).
+
 
 ## Requirements
 
@@ -37,7 +37,7 @@ git init
 - Add the theme as git sub-module
 
 ```console
-git submodule add https://github.com/hossainemruz/toha.git themes/toha
+git submodule add https://github.com/junyazhang/toha.git themes/toha
 ```
 
 >Don't use SSH URL of the theme during adding as git sub-module. Also, don't clone the theme in your `themes` directory using `git clone`. They don't work well with Github Action or Netlify.
@@ -216,19 +216,6 @@ Here, are the current plan and progress of various components of this theme. The
 - [x] Alert
 - [ ] Figure & sub-figure
 - [ ] Tabs
-
-## Contributing
-
-You can contribute to this theme in various way. You can report a bug, file an feature request, send a PR, share your thoughts etc.
-
-Pull requests are most welcomed and I will be happy to review. Just follow the following principles:
-
-- Keep it simple.
-- Keep it consistent with the design.
-- Use as little dependency as possible.
-- Have patient.
-
->I am not a web developer. I just created this theme for my personal needs. So, it is reasonable to have some flaws in the codes. Feel free to open issues and PR acknowledging the problems.
 
 ## Attribution
 

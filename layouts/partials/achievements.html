@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table {
+      width:100%;
+  }
+  table, th, td {
+      /*border: 1px solid black;*/
+      border-collapse: collapse;
+  }
+  th, td {
+      padding: 6px;
+      text-align: left;
+      font-size: large;
+  }
+  table#t01 tr:nth-child(even) {
+      background-color: #fff;
+  }
+  table#t01 tr:nth-child(odd) {
+      background-color: #bfffe5;
+  }
+  table#t01 th {
+      background-color: #34bc85;
+      color: white;
+  }
+
+  table#t02 tr:nth-child(even) {
+      background-color: #fff;
+  }
+  table#t02 tr:nth-child(odd) {
+      background-color: #e5e9f2;
+  }
+  table#t02 th {
+      background-color: #6c757d;
+      color: white;
+  }
+</style>
+</head>
+<body>
+
 <div class="container-fluid anchor pb-5 achievements-section" id="{{ replace (lower .section.name) " " "-" }}">
   {{ if not (.section.hideTitle) }}
     <h1 class="text-center">{{ .section.name }}</h1>
@@ -12,4 +53,37 @@
       {{ partial "misc/achievement.html" . }}
     {{ end }}
   </div>
+  <br><br>
+  <!-- achievements table -->
+  <!-- Awards Table -->
+  <section id="awards" class="awards-section row align-items-center  d-flex">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <table id="t02">
+              {{ range .awardsTable }}
+              <tr>
+                <th>{{ .col1 }}</th>
+                <th>{{ .col2 }}</th> 
+              </tr>
+              {{ end }}
+
+              {{ range .awards }}
+                <tr>
+                  <td>{{ .name }}</td>
+                  <td>{{ .year }}</td>
+                </tr>
+              {{ end }}
+            </table>
+          </div>
+        <div class="col-lg-1"></div>
+      </div>
+    </div>
+  </section>
+  <!--/ Awards Table -->
 </div>
+
+
+</body>
+</html>
